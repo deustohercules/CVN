@@ -26,7 +26,6 @@ import logging
 import cvn.config.entitycache as cvn_entity_cache
 #import requests
 
-
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB máx.
 
@@ -225,10 +224,9 @@ def change(grafo):
             i=1
             for fila in enumerate(resultadoQuery):
                 objecto = fila[1][0]
-                grafo.remove((rdflib.term.URIRef(sujeto), rdflib.term.URIRef(prificado), rdflib.term.URIRef(objecto)))
-                grafo.add((rdflib.term.URIRef(sujeto),
-                           rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#_' + str(i)), objecto))
-                i = i + 1
+                grafo.remove(( rdflib.term.URIRef(sujeto),rdflib.term.URIRef( prificado), rdflib.term.URIRef(objecto)))
+                grafo.add((  rdflib.term.URIRef(sujeto), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#_'+str(i)), objecto))
+                i=i+1
     return grafo
 
 # esta funcion nos permite que un recurso no tenga mas de una localizacion. Por ello se queda con la localizacion mas larga,
@@ -253,9 +251,8 @@ def eliminar_localizacion(grafo):
                     objecto = f[0]
                     if objecto != localizacion:
                         grafo.remove(
-                            (rdflib.term.URIRef(sujeto), rdflib.term.URIRef(prificado), rdflib.term.Literal(f[0],
-                                                                                                            datatype=rdflib.term.URIRef(
-                                                                                                                'http://www.w3.org/2001/XMLSchema#string'))))
+                            (rdflib.term.URIRef(sujeto), rdflib.term.URIRef(prificado), rdflib.term.Literal(f[0], datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string'))))
+
     return grafo
 def make_validation_error(message):
     return make_response(jsonify({'error': message}), 422)  # 422 = Unprocessable Entity

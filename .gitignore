@@ -19,10 +19,10 @@ downloads/
 eggs/
 .eggs/
 lib/
-.idea/
-.vscode/
 lib64/
 parts/
+.vscode/
+.idea/
 sdist/
 var/
 wheels/

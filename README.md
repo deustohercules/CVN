@@ -35,6 +35,22 @@ Ejecutar un servidor en el puerto por defecto (`5000`) y con el modo `debug` des
 ```bash
 $ pipenv run python3 -m cvn.webserver
 ```
+# Realizar el request
+
+Se  recomienda usar el programa Postman.  PAra subir la api a esta aplicacion unicamente seleccionamos subir la capeta 
+`docs`  y automaticamente encuentra la api. Se debe uniciar el servidor como se explico en la seccion superior. Postman por
+su parte cogera te permite darle los datos para la petición. 
+ 
+Una vez subida la api a Postman, se realiza un request y aumentaticamente te saldra la petidion post un url similar  al siguiente: 
+```{{baseUrl}}/convert?orcid=ORCID&format=FORMATO```
+
+Se debera cambiar en esta linea el ORCID por el orcid y FORMATO por el formato deseado. Las opciones de formato son la siguientes: 
+'xml', 'n3', 'turtle', 'nt', 'pretty-xml', 'trix', 'trig', 'nquads'. Un ejemplo: 
+```{{baseUrl}}/convert?orcid=0000-0001-8055-6823&format=xml```
+ 
+
+Para pasarle el fichero xml que queremos transformar, en esta peticion en la opcion body en binary hay que sube el fichero .xml que se quiere 
+y cuando pulsemos el boton send obtendremos las tripletas deseadas. 
 
 ## Configuración
 
