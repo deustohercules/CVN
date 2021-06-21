@@ -11,9 +11,9 @@
 |Cambios de la Versión|Reordenación de la documentación y cambio de rutas|
 
 
-Servidor HTTP que ofrece una API para convertir XML CVN a tripletas ROH.
+<!--Servidor HTTP que ofrece una API para convertir XML CVN a tripletas ROH.
 
-http://herc-as-front-desa.atica.um.es:8080/v1/ui/#/default/convert_post
+http://herc-as-front-desa.atica.um.es:8080/v1/ui/#/default/convert_post-->
 
 # Instalación
 
