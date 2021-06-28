@@ -85,4 +85,5 @@ jobs:
         run: mvn install
 
       - name: Test
-        run: ./cvn/test/execute.sh
+        run: ./cvn/tests/execute.sh
+
