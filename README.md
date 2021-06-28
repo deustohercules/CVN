@@ -137,7 +137,12 @@ El contenido del archivo que queremos debe enviarse como el cuerpo, en codificac
 - `Error while parsing the XML.` \
     El XML no es válido o no ha sido posible procesarlo (ej.: extremadamente grande)
 
-### Ejemplos de consultas
+### Ejecutar Test-
+En Ubuntu desde la terminar, 
+```bash
+./execute.sh
+```
+Creara o mdoficiara los difhceros .ttl de todos los ejemplos de CVN que se encuentran en la carpeta examples.
 
 #### curl
 
@@ -147,10 +152,7 @@ el archivo en `examples/0000-0002-8894-44817.xml` y guarda el ttl resultante en 
 ```bash
 curl --location --request POST 'http://localhost:5000/v1/convert?orcid=0000-0002-8894-4481&format=turtle' --header 'Content-Type: application/x-www-form-urlencoded' --data-binary '@examples/0000-0002-8894-4481.xml'> examples/0000-0002-8894-4481.ttl
 ```
-Este comando tambien se puede ejcutar en Ubuntu desde la terminar, 
-```bash
-./execute.sh
-```
+
 
 > Recomendable usar en Windows `"` en vez de `'`, el comando sería:
 > `curl --location --request POST "http://localhost:5000/v1/convert?orcid=000-0002-8894-4481" --header "Content-Type: application/x-www-form-urlencoded" --data-binary "@examples/000-0002-8894-4481.xml"`
