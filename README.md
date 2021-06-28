@@ -25,7 +25,7 @@ Requisitos:
 Instalamos con Pipenv (son imprescindible las dos ordenes):
 
 ```bash
-$ pip3 install pipenv
+$ pip install pipenv
 $ pipenv install
 ```
 
@@ -142,16 +142,18 @@ El contenido del archivo que queremos debe enviarse como el cuerpo, en codificac
 #### curl
 
 Suponiendo que el servidor está en `127.0.0.1:5000`, la siguiente llamada usando la utilidad de consola `curl` convertirá
-el archivo en `examples/cvn_202033-Diego.xml`
+el archivo en `examples/0000-0002-8894-44817.xml` y guarda el ttl resultante en un fichero con el mismo nombre y en la misma dirección pero con terminación .ttl. 
 
 ```bash
-curl --location --request POST 'http://127.0.0.1:5000/v1/convert?orcid=0000-0001-8055-6823' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-binary '@examples/cvn_202033-Diego.xml'
+curl --location --request POST 'http://localhost:5000/v1/convert?orcid=0000-0002-8894-4481&format=turtle' --header 'Content-Type: application/x-www-form-urlencoded' --data-binary '@examples/0000-0002-8894-4481.xml'> examples/0000-0002-8894-4481.ttl
+```
+Este comando tambien se puede ejcutar en Ubuntu desde la terminar, 
+```bash
+./execute.sh
 ```
 
 > Recomendable usar en Windows `"` en vez de `'`, el comando sería:
-> `curl --location --request POST "http://127.0.0.1:5000/v1/convert?orcid=0000-0001-8055-6823" --header "Content-Type: application/x-www-form-urlencoded" --data-binary "@examples/cvn_202033-Diego.xml"`
+> `curl --location --request POST "http://localhost:5000/v1/convert?orcid=000-0002-8894-4481" --header "Content-Type: application/x-www-form-urlencoded" --data-binary "@examples/000-0002-8894-4481.xml"`
 
 #### C# - RestSharp
 

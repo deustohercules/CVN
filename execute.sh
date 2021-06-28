@@ -1,0 +1,1 @@
+curl --location --request POST 'http://localhost:5000/v1/convert?orcid=0000-0002-8894-4481&format=turtle' --header 'Content-Type: application/x-www-form-urlencoded' --data-binary '@examples/0000-0002-8894-4481.xml'> examples/0000-0002-8894-4481.ttl
