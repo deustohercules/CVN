@@ -156,7 +156,6 @@ el archivo en `examples/0000-0002-8894-44817.xml` y guarda el ttl resultante en 
 curl --location --request POST 'http://localhost:5000/v1/convert?orcid=0000-0002-8894-4481&format=turtle' --header 'Content-Type: application/x-www-form-urlencoded' --data-binary '@examples/0000-0002-8894-4481.xml'> examples/0000-0002-8894-4481.ttl
 ```
 
-
 > Recomendable usar en Windows `"` en vez de `'`, el comando sería:
 > `curl --location --request POST "http://localhost:5000/v1/convert?orcid=000-0002-8894-4481" --header "Content-Type: application/x-www-form-urlencoded" --data-binary "@examples/000-0002-8894-4481.xml"`
 
