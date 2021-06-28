@@ -104,6 +104,14 @@ optional arguments:
 
 Si queremos que el servidor escuche en `0.0.0.0`, añadimos el argumento `--host 0.0.0.0`.
 
+# Ejecutar Tests
+
+En Ubuntu desde la terminar, 
+```bash
+./cvn/test/execute.sh
+```
+Creara o mdoficiara los difhceros .ttl de todos los ejemplos de CVN que se encuentran en la carpeta examples.
+
 # Endpoints
 
 ## `/v1/convert`
@@ -137,12 +145,7 @@ El contenido del archivo que queremos debe enviarse como el cuerpo, en codificac
 - `Error while parsing the XML.` \
     El XML no es válido o no ha sido posible procesarlo (ej.: extremadamente grande)
 
-### Ejecutar Tests-
-En Ubuntu desde la terminar, 
-```bash
-./cvn/test/execute.sh
-```
-Creara o mdoficiara los difhceros .ttl de todos los ejemplos de CVN que se encuentran en la carpeta examples.
+
 
 #### curl
 
