@@ -102,7 +102,7 @@ jobs:
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        build_dir: validation-questions/html/ 
+        build_dir: validation-questions/html 
         publish_dir: target/site
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
