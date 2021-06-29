@@ -122,12 +122,12 @@ public class ValidationQuestionsDynamicTest {
 					try {
 						query = FileUtils.readFileToString(inputFile, (Charset) null);
 						// File outputFile = new File(inputFile.getAbsolutePath());
-						try {
+						//try {
 							//String queryResult = FileUtils.readFileToString(outputFile, (Charset) null);
-							inputList.add(query);
+						inputList.add(query);
 							//outputList.add(queryResult);
 						//	outputList.add(new JSONObject(queryResult));
-							pathList.add(inputFile.getAbsolutePath().replace(".result",".json"));
+						pathList.add(inputFile.getAbsolutePath().replace(".sparql",".json"));
 						//} catch (IOException e1) {
 						//	System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
 						//}
