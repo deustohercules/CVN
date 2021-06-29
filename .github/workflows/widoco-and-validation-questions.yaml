@@ -97,7 +97,7 @@ jobs:
     
 
     - name: Copy html file to docs folder
-      run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
+      run: cp -r /home/runner/work/CVN/CVN/validation-questions/html/ docs/html/
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
