@@ -67,5 +67,5 @@ jobs:
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
-      run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/examples/result/roh-core.ttl,https://raw.githubusercontent.com/deustohercules/examples/result/0000-0002-4993-9540.ttl -DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
+      run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/CVN/examples/result/roh-core.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-4993-9540.ttl -DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
 
