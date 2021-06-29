@@ -94,8 +94,8 @@ jobs:
         python jsonTohtml.py "/home/runner/work/CVN/CVN/validation-questions/sparql-query" "/home/runner/work/CVN/CVN/validation-questions/html"
     
 
-     - name: Copy html file to docs folder
-       run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
+    - name: Copy html file to docs folder
+      run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
