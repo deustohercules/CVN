@@ -430,8 +430,8 @@ displayname = "roh:PhDSupervisingRelationship"
         cache = "foaf:name"
 
             [[entities.subentities.subentities.relationships]]
-            direct = "roh:correspondingAuthor"
-            inverse = "roh:correspondingAuthorOf"
+            direct = "roh:correspondingAuthorOf"
+            inverse = "roh:correspondingAuthor"
 
             [[entities.subentities.subentities.properties]]
             displayname = "foaf:name"
@@ -588,8 +588,8 @@ displayname = "roh:BachelorsSupervisingRelationship"
         cache = "foaf:name"
 
             [[entities.subentities.subentities.relationships]]
-            direct = "roh:correspondingAuthor"
-            inverse = "roh:correspondingAuthorOf"
+            direct = "roh:correspondingAuthorOf"
+            inverse = "roh:correspondingAuthor"
 
             [[entities.subentities.subentities.properties]]
             displayname = "foaf:name"
