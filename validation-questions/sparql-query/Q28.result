@@ -1,9 +1,0 @@
-{
-    "result": [
-        {
-            "researcher": "http://w3id.org/roh/data#investigador-1",
-            "project": "http://w3id.org/roh/data#a-project",
-            "roleClass": "http://w3id.org/roh/mirror/vivo#InvestigatorRole"
-        }
-    ]
-}

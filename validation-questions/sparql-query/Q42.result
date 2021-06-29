@@ -1,8 +1,0 @@
-{
-    "result": [
-        {
-            "researcher": "http://w3id.org/roh/data#investigador-1",
-            "grant": "http://w3id.org/roh/data#investigador-1-juan-de-la-cierva"
-        }
-    ]
-}
