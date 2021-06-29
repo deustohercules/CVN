@@ -130,7 +130,7 @@ public class ValidationQuestionsDynamicTest {
 							pathList.add(inputFile.getAbsolutePath().replace(".result",".json"));
 						//} catch (IOException e1) {
 						//	System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
-						}
+						//}
 					} catch (IOException e) {
 						System.out.println(String.format("Can't read query file %s", inputFile.getAbsolutePath()));
 						
