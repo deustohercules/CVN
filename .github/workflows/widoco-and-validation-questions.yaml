@@ -38,6 +38,8 @@ jobs:
           python -m pip install --upgrade pip
           pip3 install pipenv
           pipenv install
+          pip3 install json2html
+
 
 
     
@@ -91,7 +93,7 @@ jobs:
     - name: Create html files
       run: |
         cd validation-questions/src
-        python jsonTohtml.py "/home/runner/work/CVN/CVN/validation-questions/sparql-query" "/home/runner/work/CVN/CVN/validation-questions/html"
+        python3 jsonTohtml.py "/home/runner/work/CVN/CVN/validation-questions/sparql-query" "/home/runner/work/CVN/CVN/validation-questions/html"
     
 
     - name: Copy html file to docs folder
