@@ -62,7 +62,7 @@ jobs:
       run: mvn install
 
     - name: Test
-      run: pipenv rum python3 -m cvn.test
+      run: pipenv run python3 -m cvn.test
 
 
     - name: Launch tests
