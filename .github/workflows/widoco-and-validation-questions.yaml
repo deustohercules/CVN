@@ -70,8 +70,6 @@ jobs:
       run: |
         cd validation-questions
         mkdir html
-        cd html 
-        mkdir report
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
@@ -81,20 +79,18 @@ jobs:
     - name: copy maven report to html folder
       run: |
         cd validation-questions
-        cp -r target/site/*  html/report
+        cp -r target/site/*  html
     - name: Create html files
       run: |
         cd validation-questions/src
         python3 jsonTohtml.py "/home/runner/work/CVN/CVN/validation-questions/sparql-query" "/home/runner/work/CVN/CVN/validation-questions/html"
     
 
-    - name: Copy html file to docs folder
-      run: cp -r /home/runner/work/CVN/CVN/validation-questions/html/ docs/html/
-
+    
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        build_dir: docs 
+        build_dir: validation-questions/html
         publish_dir: target/site
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
