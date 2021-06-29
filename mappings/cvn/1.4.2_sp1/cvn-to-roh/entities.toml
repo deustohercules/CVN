@@ -1004,8 +1004,8 @@ id.format = "{vivo:doi}"
     value = "020"
 
     [[entities.relationships]]
-    direct = "roh:correspondingAuthorOf"
-    inverse= "roh:correspondingAuthor"
+    direct = "roh:correspondingAuthor"
+    inverse= "roh:correspondingAuthorOf"
     link_to_cvn_person = true
 
     [[entities.properties]]
