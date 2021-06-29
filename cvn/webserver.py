@@ -103,7 +103,6 @@ def v1_convert():
     # Tipos de datos
     with open("mappings/cvn/1.4.2_sp1/cvn-to-roh/data-types.toml") as f:
         config_data_types = toml.loads(f.read())
-
     # TODO mover a su clase
     for data_type_config in config_data_types['datatypes']:
         default = False
@@ -116,6 +115,7 @@ def v1_convert():
         ontology_config.add_data_type(DataType(ontology=data_type_config['ontology'], name=data_type_config['name'],
                                                python_type=data_type_config['python_type'], default=default,
                                                force=force))
+
     # 2. Generar entidades
 
     # Cargar config
@@ -137,10 +137,12 @@ def v1_convert():
             primary_entity = generated_entity
         else:
             entities.append(generated_entity)
+    
     if primary_entity is None:
         raise ValueError("Config error: there is no primary entity")
 
     # Procesar entidad primaria
+
     primary_entity.generate_and_add_to_ontology(ontology_config, root)
 
     for entity in entities:

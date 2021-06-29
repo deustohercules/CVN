@@ -254,6 +254,7 @@ class Entity:
                     continue
                 self.add_entity_to_ontology(ontology_config, skip_subentities_with_subcode)
                 if self.primary:
+
                     ontology_config.cvn_person = self.get_uri()
 
                 for sub_entity in self.subentities:
@@ -360,7 +361,7 @@ class Entity:
             if comprobar_propiedad(property_item.formatted_value):
 
                 if property_item.should_generate():
-
+                    
                     # Valores por defecto: el tipo de datos definido como default y la propiedad como string simplón
                     literal_type = ontology_config.get_ontology(default_type.ontology).term(default_type.name)
                     property_value = str(property_item.formatted_value)
@@ -441,6 +442,7 @@ class Entity:
     def add_entity_to_ontology(self, ontology_config, skip_subentities_with_subcode):
         if not self.should_generate():
             return
+       
         if self.uri is None or self.uri == "http://sws.geonames.org/2510769/" or self.uri=="http://sws.geonames.org/6695072/":
             # Propiedades
             propiedades = self.generate_property_triples(ontology_config)
