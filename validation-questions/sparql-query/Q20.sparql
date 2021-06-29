@@ -1,0 +1,20 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+select (count( distinct ?sujeto) AS ?countKnowledgeArea)  ?knowledgeArea
+where {
+
+ ?sujeto a ?ClassSujeto;
+            roh:hasKnowledgeArea ?knowledgeArea. 
+
+Filter(?ClassSujeto = roh:ResearchObject || ?ClassSujeto = vivo:Project)
+} 
+Group by ?knowledgeArea
+ORDER by desc( ?countKnowledgeArea)
+
+
+
+

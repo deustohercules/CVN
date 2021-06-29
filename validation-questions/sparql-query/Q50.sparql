@@ -1,0 +1,32 @@
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#> 
+prefix dc: <http://purl.org/dc/elements/1.1/> 
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix iao: <http://w3id.org/roh/mirror/obo/iao#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix uneskos-individuals:  <http://w3id.org/roh/unesco-individuals#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+prefix roh: <http://w3id.org/roh#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  ?impactFactorName
+WHERE {
+?journalarticle a iao:IAO_0000013 ;
+			vivo:dateIssued+|vivo:dateTimeValue ?dateTimeValue ;
+      bibo:authorList+| roh:seqOfAuthors ?authorList ;
+      vivo:hasPublicationVenue        ?journal;
+      roh:hasMetric ?metric .
+?journal a bibo:Journal;
+      roh:hasMetric ?journalMetric.
+?dateTimeValue vivo:dateTime ?date .
+?authorList rdfs:member <http://w3id.org/roh/data#investigador-1>.
+?journalMetric roh:impactFactor ?impactFactor;
+			vivo:dateIssued+|vivo:dateTimeValue ?dateMetricJournal;
+                  roh:impactFactorName ?impactFactorName.
+      ?dateMetricJournal vivo:dateTime ?datemetricJournal.
+                           
+Filter(year(?datemetricJournal) = year(?date))
+
+FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2017"^^xsd:integer )
+} 

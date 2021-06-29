@@ -1,0 +1,19 @@
+{
+    "result": [
+        {
+            "journal_article": "http://w3id.org/roh/data#journal-article-2",
+            "nameOfImpactFactor": "SJR",
+            "count": "2^^http://www.w3.org/2001/XMLSchema#integer"
+        },
+        {
+            "journal_article": "http://w3id.org/roh/data#journal-article-2",
+            "nameOfImpactFactor": "jcr",
+            "count": "2^^http://www.w3.org/2001/XMLSchema#integer"
+        },
+        {
+            "journal_article": "http://w3id.org/roh/data#journal-article-1",
+            "nameOfImpactFactor": "jcr",
+            "count": "2^^http://www.w3.org/2001/XMLSchema#integer"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+PREFIX iao: <http://w3id.org/roh/mirror/obo/iao#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT distinct ?journal_article ?nameOfImpactFactor  (COUNT(?journal_article) as ?count)  WHERE {
+?journal_article a bibo:Document ;
+         vivo:hasPublicationVenue        ?journal_revusta;
+        vivo:dateIssued ?dateTimeValue .
+      #  roh:seqOfAuthors+|bibo:authorList ?authorList  .
+        ?dateTimeValue vivo:dateTime ?date .
+ ?journal_revusta a bibo:Journal;
+                roh:hasMetric ?jorunalMetric.
+
+?jorunalMetric a roh:JournalMetric;
+    roh:impactFactor ?impactFactor ;
+    roh:impactFactorName ?nameOfImpactFactor;
+	roh:quartile ?quartile ;
+ 	 vivo:dateTimeValue+|vivo:dateIssued ?DateMetricJournal.
+?DateMetricJournal a vivo:DateTimeValue ;
+              vivo:dateTime ?dateMetricJournal. 
+
+Filter(year(?dateMetricJournal) = year(?date))
+FILTER (str(?quartile) = "Q1"^^xsd:string || str(?quartile) = "Q2"^^xsd:string) 
+ FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2021"^^xsd:integer )
+
+} GROUP BY ?journal_article  ?nameOfImpactFactor HAVING (?count > 0) 

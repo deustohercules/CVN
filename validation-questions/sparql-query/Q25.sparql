@@ -1,0 +1,28 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+
+SELECT  distinct ?thesis ?classThesis ?student  ?supervisor
+WHERE { 
+    ?thesis a  ?classThesis;
+        a bibo:Thesis;
+       	roh:correspondingAuthor ?student.
+    ?student vivo:relatedBy ?posicion. 
+    ?posicion a roh:SupervisingRelationship;
+           vivo:relates ?supervision. 
+    ?supersion a roh:SupervisorRole;
+             roh:roleOf ?supervisor.
+    ?supervisor a foaf:Person.
+FILTER NOT EXISTS {
+        ?thesis a ?otherClass .
+        ?otherClass rdfs:subClassOf ?classThesis .
+        FILTER (?otherClass != ?classThesis)
+    }
+FILTER (str(?classThesis) != "http://w3id.org/roh#ResearchObject")
+       Filter( str(?classThesis) != "http://www.w3.org/2002/07/owl#NamedIndividual")
+
+}
