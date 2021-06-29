@@ -81,7 +81,6 @@ jobs:
       working-directory: /home/runner/work/CVN/CVN/validation-questions
       run:  mvn site
 
-
     - name: Generate documentation
       working-directory: /home/runner/work/CVN/CVN/validation-questions
       run: mvn javadoc:test-javadoc 
