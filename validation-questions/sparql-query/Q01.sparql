@@ -1,9 +1,10 @@
 prefix roh: <http://w3id.org/roh#>
 
 
-SELECT distinct ?author ?document   
+SELECT distinct ?author ?document  ?titulo
  WHERE { 
-      ?document roh:correspondingAuthor ?author.
+      ?document roh:correspondingAuthor ?author;
+                roh:title ?titulo.
 
   }
   
