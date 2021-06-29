@@ -1,10 +1,11 @@
 prefix roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 
-SELECT distinct ?author ?document  ?titulo
+SELECT distinct ?authorName  ?title
  WHERE { 
-      ?document roh:correspondingAuthor ?author;
-                roh:title ?titulo.
-
+    ?document roh:correspondingAuthor ?URI_author;
+                roh:title ?title.
+    ?URI_author foaf:name ?authorName;
   }
   
