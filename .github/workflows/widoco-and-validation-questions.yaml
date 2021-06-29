@@ -64,18 +64,6 @@ jobs:
     - name: Test
       run: pipenv rum python3 -m cvn.test
 
-     - name: Checkout ROH
-      uses: actions/checkout@v2
-      with: 
-        repository: ROH
-        path: roh
-
-    - name: Create html folder
-      run: |
-        cd validation-questions
-        mkdir html
-        cd html 
-        mkdir report
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
