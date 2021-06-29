@@ -64,8 +64,43 @@ jobs:
     - name: Test
       run: pipenv run python3 -m cvn.test
 
+    - name: Create html folder
+      run: |
+        cd validation-questions
+        mkdir html
+        cd html 
+        mkdir report
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/CVN/main/examples/result/roh-core.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-4993-9540.ttl -DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
 
+     - name: Generate maven site
+      working-directory: /home/runner/work/CVN/CVN/validation-questions
+      run:  mvn site
+
+
+    - name: Generate documentation
+      working-directory: /home/runner/work/CVN/CVN/validation-questions
+      run: mvn javadoc:test-javadoc 
+
+    - name: copy maven report to html folder
+      run: |
+        cd validation-questions
+        cp -r target/site/*  html/report
+    - name: Create html files
+      run: |
+        cd validation-questions/src
+        python jsonTohtml.py "/home/runner/work/CVN/CVN/validation-questions/sparql-query" "/home/runner/work/CVN/CVN/validation-questions/html"
+    
+
+     - name: Copy html file to docs folder
+       run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
+
+    - name: Publish on Github Pages
+      uses: crazy-max/ghaction-github-pages@v2.3.0
+      with:
+        build_dir: docs 
+        publish_dir: target/site
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
