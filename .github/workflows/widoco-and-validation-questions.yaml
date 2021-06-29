@@ -51,6 +51,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    
     - name: Checkout pellet
       uses: actions/checkout@v2
       with: 
@@ -60,9 +61,8 @@ jobs:
       working-directory: pellet
       run: mvn install
 
-     - name: Test
-      run: |
-          pipenv rum python3 -m cvn.test
+    - name: Test
+      run: pipenv rum python3 -m cvn.test
 
      - name: Checkout ROH
       uses: actions/checkout@v2
