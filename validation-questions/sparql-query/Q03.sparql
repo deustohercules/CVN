@@ -9,6 +9,6 @@ SELECT
  ?publication ?comunidadAutonoma ?metric
 WHERE {
   ?publication         a roh:PhDThesis ;
-    roh:ThesisMetric ?metric.}
+    roh:hasMetric ?metric.}
 
 
