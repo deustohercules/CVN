@@ -6,9 +6,12 @@ prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix gn: <http://w3id.org/roh/mirror/geonames#>
 
 SELECT
- ?publication ?comunidadAutonoma ?metric
+ ?publication  ?metric ?author
 WHERE {
   ?publication         a roh:PhDThesis ;
-    roh:hasMetric ?metric.}
+    roh:hasMetric ?metric;
+    roh:correspondingAuthor ?person.
+    ?person foaf:name ?author.
+    }
 
 

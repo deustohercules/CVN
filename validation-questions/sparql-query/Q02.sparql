@@ -5,7 +5,7 @@ prefix roh: <http://w3id.org/roh#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix gn: <http://w3id.org/roh/mirror/geonames#>
-
+prefix vcard: <http://w3id.org/roh/mirror/vcard#>
 SELECT
 ?publication ?location
 WHERE {
@@ -13,5 +13,4 @@ WHERE {
                     roh:correspondingAuthor ?person.
   ?person roh:hasContactInfo ?individual.
   ?individual vcard:locality       ?location .
-
 }
