@@ -6,11 +6,20 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix gn: <http://w3id.org/roh/mirror/geonames#>
 prefix vcard: <http://w3id.org/roh/mirror/vcard#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+
 SELECT
-?publication ?location
+?author  ?address ?extended_addres  ?country-name ?city ?Postal-code 
 WHERE {
   ?publication     #    a bibo:AcademicArticle;
                     roh:correspondingAuthor ?person.
-  ?person roh:hasContactInfo ?individual.
-  ?individual vcard:locality       ?location .
+  ?person roh:hasContactInfo ?individual;
+  foaf:name ?author.
+  ?individual vcard:hasAddress ?adress.
+  ?adress vcard:locality       ?location;
+  vcard:country-name ?country-name ;
+    vcard:extended-address  ?extended_addres;
+    vcard:locality ?city;
+    vcard:postal-code ?Postal-code;
+    vcard:street-address ?address.
 }
