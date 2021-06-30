@@ -1,4 +1,3 @@
-
 prefix vivo: <http://w3id.org/roh/mirror/vivo#>
 prefix roh: <http://w3id.org/roh#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#>
@@ -8,12 +7,13 @@ PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 
 SELECT
- ?publication  ?metric ?author
+ ?publication  ?metric   ?predicado ?objecto
 WHERE {
   ?publication         a roh:PhDThesis ;
     roh:hasMetric ?metric;
-    roh:correspondingAuthor ?person.
-    ?person foaf:name ?author.
+    ?predicado ?objecto.
+    #roh:correspondingAuthor ?person.
+    #?person foaf:name ?author.
     }
 
 
