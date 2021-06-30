@@ -9,7 +9,7 @@ prefix vcard: <http://w3id.org/roh/mirror/vcard#>
 SELECT
 ?publication ?location
 WHERE {
-  ?publication         a bibo:AcademicArticle;
+  ?publication     #    a bibo:AcademicArticle;
                     roh:correspondingAuthor ?person.
   ?person roh:hasContactInfo ?individual.
   ?individual vcard:locality       ?location .
