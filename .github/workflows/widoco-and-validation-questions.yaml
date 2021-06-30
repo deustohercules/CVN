@@ -75,7 +75,7 @@ jobs:
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
-      run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/CVN/main/examples/result/roh-core.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-4993-9540.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-5525-1259.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7275-3867.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7558-2880.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-8894-4481.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-1840-5578.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-3473-0821.ttl,-DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
+      run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/CVN/main/examples/result/roh-core.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-4993-9540.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-5525-1259.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7275-3867.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7558-2880.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-8894-4481.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-1840-5578.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-3473-0821.ttl, -DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
 
     - name: Generate maven site
       working-directory: /home/runner/work/CVN/CVN/validation-questions
