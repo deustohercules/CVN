@@ -16,7 +16,7 @@ WHERE {
   ?person roh:hasContactInfo ?individual;
   foaf:name ?author.
   ?individual vcard:hasAddress ?adress.
-  ?adress vcard:locality       ?location;
+  ?adress 
   vcard:country-name ?country-name ;
     vcard:extended-address  ?extended_addres;
     vcard:locality ?city;
