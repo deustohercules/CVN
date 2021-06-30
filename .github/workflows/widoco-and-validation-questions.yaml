@@ -70,38 +70,40 @@ jobs:
       run: |
         cd validation-questions
         mkdir html
-        cd html 
-        mkdir report
+     #   cd html 
+     #   mkdir report
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/CVN/main/examples/result/roh-core.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-4993-9540.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-5525-1259.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7275-3867.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7558-2880.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-8894-4481.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-1840-5578.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-3473-0821.ttl, -DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
 
-    - name: Generate maven site
-      working-directory: /home/runner/work/CVN/CVN/validation-questions
-      run:  mvn site
+    #- name: Generate maven site
+    #  working-directory: /home/runner/work/CVN/CVN/validation-questions
+    #  run:  mvn site
 
 
-    - name: Generate documentation
-      working-directory: /home/runner/work/CVN/CVN/validation-questions
-      run: mvn javadoc:test-javadoc 
+    #- name: Generate documentation
+    #  working-directory: /home/runner/work/CVN/CVN/validation-questions
+    #  run: mvn javadoc:test-javadoc 
 
-    - name: copy maven report to html folder
-      run: |
-        cd validation-questions
-        cp -r target/site/*  html/report
+    #- name: copy maven report to html folder
+    #  run: |
+    #    cd validation-questions
+    #    cp -r target/site/*  html/report
     - name: Create html files
       run: |
         cd validation-questions/src
         python3 jsonTohtml.py "/home/runner/work/CVN/CVN/validation-questions/sparql-query" "/home/runner/work/CVN/CVN/validation-questions/html"
   
     - name: Copy html file to docs folder
-      run: cp -r /home/runner/work/CVN/CVN/validation-questions/html/ docs/html/
+      run: |
+        mkdir docGitPage
+        cp -r /home/runner/work/CVN/CVN/validation-questions/html/ docGitPage/
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        build_dir: docs
+        build_dir: docGitPage
         publish_dir: target/site
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
