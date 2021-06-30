@@ -1,0 +1,14 @@
+
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix gn: <http://w3id.org/roh/mirror/geonames#>
+
+SELECT
+ ?publication ?comunidadAutonoma ?metric
+WHERE {
+  ?publication         a roh:PhDThesis ;
+    roh:ThesisMetric ?metric.}
+
+
