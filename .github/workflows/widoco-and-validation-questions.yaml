@@ -73,7 +73,7 @@ jobs:
         cd html 
         mkdir result
         cd ../../
-        cp -r examples/result/ validation-questions/result
+        cp -r examples/result/ validation-questions/html/result/
      #   cd html 
      #   mkdir report
 
