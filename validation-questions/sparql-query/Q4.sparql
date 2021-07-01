@@ -1,0 +1,10 @@
+prefix roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+
+
+SELECT distinct ?project  ?title
+ WHERE { 
+    ?project a vivo:Project;
+            roh:title ?title.
+  }
+  
