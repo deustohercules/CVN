@@ -7,7 +7,7 @@ prefix vcard: <http://w3id.org/roh/mirror/vcard#>
 PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 SELECT
- distinct ?author  ?address ?extendedAddres ?city ?PostalCode 
+  ?author  ?address ?extendedAddres ?city ?PostalCode 
 WHERE {
   ?publication   roh:correspondingAuthor ?person.
   ?person roh:hasContactInfo ?individual;
