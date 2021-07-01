@@ -72,6 +72,7 @@ jobs:
         mkdir result
         cd ../../
         cp -r examples/result/ validation-questions/html/
+        
 
 
     - name: Launch tests
