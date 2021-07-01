@@ -6,7 +6,8 @@ SELECT distinct ?project  ?title ?monetaryAmount
  WHERE { 
     ?project a vivo:Project;
             roh:title ?title.
-        ?funding roh:monetaryAmount ?monetaryAmount;
-                        roh:supports ?project.
+        ?funding a roh:Funding;
+                 roh:monetaryAmount ?monetaryAmount;
+                roh:supports ?project.
   }
   
