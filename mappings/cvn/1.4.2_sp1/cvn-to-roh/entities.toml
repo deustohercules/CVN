@@ -401,34 +401,6 @@ displayname = "roh:PhDSupervisingRelationship"
                 [[entities.subentities.subentities.properties.sources]]
                 code = "030.040.000.150"
                 name = "mark"
-                
-               [[entities.subentities.subentities.subentities]]
-                displayname = "foaf:Person"
-                id.resource = "Person"
-                cache = "foaf:name"
-
-                    [[entities.subentities.subentities.subentities.relationships]]
-                    direct = "roh:correspondingAuthorOf"
-                    inverse = "roh:correspondingAuthor"
-
-                    [[entities.subentities.subentities.subentities.properties]]
-                    displayname = "foaf:name"
-                    format = "{name} {familyName} {secondFamilyName}"
-
-                        [[entities.subentities.subentities.subentities.properties.sources]]
-                        code = "030.040.000.120"
-                        name = "name"
-                        bean = "GivenName"
-
-                        [[entities.subentities.subentities.subentities.properties.sources]]
-                        code = "030.040.000.120"
-                        name = "familyName"
-                        bean = "CvnFamilyNameBean/{http://codes.cvn.fecyt.es/beans}FirstFamilyName"
-
-                        [[entities.subentities.subentities.subentities.properties.sources]]
-                        code = "030.040.000.120"
-                        name = "secondFamilyName"
-                        bean = "CvnFamilyNameBean/{http://codes.cvn.fecyt.es/beans}SecondFamilyName"
 
         [[entities.subentities.subentities]]
         displayname = "roh:ThesisViva"
