@@ -71,7 +71,7 @@ jobs:
         cd html 
         mkdir result
         cd ../../
-        cp -r examples/result/ validation-questions/html/result/
+        cp -r home/runner/work/CVN/CVN/examples/result/ validation-questions/html/result/
 
 
     - name: Launch tests
