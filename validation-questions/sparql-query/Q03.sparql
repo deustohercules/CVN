@@ -7,14 +7,13 @@ PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 
 SELECT
- ?publication  ?metric   ?titulo
+ ?publication   ?titulo ?mark  
 WHERE {
   ?publication         a roh:PhDThesis ;
-    roh:hasMetric ?metric;
-    roh:title ?titulo.
-    #?predicado ?objecto.
-    #roh:correspondingAuthor ?person.
-    #?person foaf:name ?author.
+                     roh:title ?titulo.
+    OPtional{?publication roh:hasMetric ?metric.
+    ?metric roh:mark ?mark. }
+
     }
 
 
