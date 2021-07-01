@@ -2,12 +2,14 @@ prefix roh: <http://w3id.org/roh#>
 PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
 
-SELECT distinct ?project  ?title ?monetaryAmount
+SELECT distinct ?project  ?title ?monetaryAmount ?role
  WHERE { 
     ?project a vivo:Project;
-            roh:title ?title.
+            roh:title ?title;
+            vivo:relates ?role.
         ?funding a roh:Funding;
-                 roh:monetaryAmount ?monetaryAmount;
+                 
                 roh:supports ?project.
+Optional{ ?funding roh:monetaryAmount ?monetaryAmount.}
   }
   
