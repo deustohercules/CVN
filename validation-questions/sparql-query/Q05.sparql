@@ -1,0 +1,18 @@
+prefix roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#>
+SELECT distinct ?PrincipalInvestigatorName ?project  ?title ?monetaryAmount 
+ WHERE { 
+    ?project a vivo:Project;
+            roh:title ?title;
+            vivo:relates ?role.
+        ?role  a vivo:MemberRole;
+        roh:roleOf ?person.
+        ?person foaf:name  ?PrincipalInvestigatorName.
+        ?funding a roh:Funding;  
+                roh:supports ?project.
+Optional{ ?funding ro:BFO_0000051 ?fundingAmount.
+?fundingAmount  roh:monetaryAmount ?monetaryAmount.}
+  }
+  
