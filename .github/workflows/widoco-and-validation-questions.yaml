@@ -70,6 +70,10 @@ jobs:
       run: |
         cd validation-questions
         mkdir html
+        cd html 
+        mkdir result
+        cd ../../
+        cp -r examples/result/ validation-questions/result
      #   cd html 
      #   mkdir report
 
