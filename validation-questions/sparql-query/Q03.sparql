@@ -7,7 +7,7 @@ PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 
 SELECT
- ?publication  ?metric   titulo
+ ?publication  ?metric   ?titulo
 WHERE {
   ?publication         a roh:PhDThesis ;
     roh:hasMetric ?metric;
