@@ -11,8 +11,9 @@ SELECT
 WHERE {
   ?publication         a roh:PhDThesis ;
     roh:hasMetric ?metric;
-    ?predicado ?objecto.
-    #roh:correspondingAuthor ?person.
+    roh:title ?titulo;
+    #?predicado ?objecto.
+    roh:correspondingAuthor ?person.
     #?person foaf:name ?author.
     }
 
