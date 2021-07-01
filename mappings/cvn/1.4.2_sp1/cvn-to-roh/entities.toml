@@ -45,7 +45,7 @@ cache = "foaf:name"
 
         [[entities.subentities.subentities]]
         displayname = "vcard:Address"
-        id.format = "{vcard:street-address} {vcard:extended-address} {vcard:locality} {vcard:country-name} {vcard:postal-code}"
+        id.format = "{vcard:street-address} {vcard:extended-address} {vcard:locality} {vcard:postal-code}"
 
             [[entities.subentities.subentities.relationships]]
             inverse = "vcard:hasAddress"
@@ -82,19 +82,19 @@ cache = "foaf:name"
                 code = "000.010.000.170"
                 name = "city"
 
-            [[entities.subentities.subentities.properties]]
-            displayname = "vcard:country-name"
-            format = "{country} {comunidadAutonoma} {provincia}"
+            #[[entities.subentities.subentities.properties]]
+            #displayname = "vcard:country-name"
+            #format = "{country} {comunidadAutonoma} {provincia}"
 
-                [[entities.subentities.subentities.properties.sources]]
-                code = "000.010.000.180"
-                name = "country"
-                [[entities.subentities.subentities.properties.sources]]
-                code = "000.010.000.190"
-                name = "comunidadAutonoma"
-                [[entities.subentities.subentities.properties.sources]]
-                code = "000.010.000.200"
-                name = "provincia"
+            #    [[entities.subentities.subentities.properties.sources]]
+            #    code = "000.010.000.180"
+            #    name = "country"
+            #    [[entities.subentities.subentities.properties.sources]]
+            #    code = "000.010.000.190"
+            #    name = "comunidadAutonoma"
+            #    [[entities.subentities.subentities.properties.sources]]
+            #    code = "000.010.000.200"
+            #    name = "provincia"
 
         [[entities.subentities.subentities]]
         displayname= "vcard:Email"
