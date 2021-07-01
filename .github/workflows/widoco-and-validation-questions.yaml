@@ -39,9 +39,6 @@ jobs:
           pip3 install pipenv
           pipenv install
           pip3 install json2html
-
-
-
     
     - name: Checkout pellet
       uses: actions/checkout@v2
@@ -59,6 +56,7 @@ jobs:
       with: 
         repository: stardog-union/pellet
         path: pellet
+
     - name: Install Pellet reasoner
       working-directory: pellet
       run: mvn install
@@ -74,26 +72,13 @@ jobs:
         mkdir result
         cd ../../
         cp -r examples/result/ validation-questions/html/result/
-     #   cd html 
-     #   mkdir report
+
 
     - name: Launch tests
       working-directory: /home/runner/work/CVN/CVN/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/deustohercules/CVN/main/examples/result/roh-core.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-4993-9540.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-5525-1259.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7275-3867.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-7558-2880.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0002-8894-4481.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-1840-5578.ttl,/home/runner/work/CVN/CVN/examples/result/0000-0003-3473-0821.ttl, -DqueryFolder=/home/runner/work/CVN/CVN/validation-questions/sparql-query/
 
-    #- name: Generate maven site
-    #  working-directory: /home/runner/work/CVN/CVN/validation-questions
-    #  run:  mvn site
-
-
-    #- name: Generate documentation
-    #  working-directory: /home/runner/work/CVN/CVN/validation-questions
-    #  run: mvn javadoc:test-javadoc 
-
-    #- name: copy maven report to html folder
-    #  run: |
-    #    cd validation-questions
-    #    cp -r target/site/*  html/report
+    
     - name: Create html files
       run: |
         cd validation-questions/src
