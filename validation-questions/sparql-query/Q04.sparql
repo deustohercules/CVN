@@ -9,7 +9,7 @@ SELECT distinct ?project  ?title ?monetaryAmount ?role
             vivo:relates ?role.
         ?funding a roh:Funding;  
                 roh:supports ?project.
-Optional{ ?funding ro:BFO_0000051 ?fundingAmount;
+Optional{ ?funding ro:BFO_0000051 ?fundingAmount.
 ?fundingAmount  roh:monetaryAmount ?monetaryAmount.}
   }
   
