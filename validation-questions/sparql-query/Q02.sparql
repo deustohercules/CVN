@@ -9,16 +9,15 @@ prefix vcard: <http://w3id.org/roh/mirror/vcard#>
 PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 SELECT
-?author  ?address ?extended_addres  ?country-name ?city ?PostalCode 
+?author  ?address ?extendedAddres  ?countryName ?city ?PostalCode 
 WHERE {
-  ?publication     #    a bibo:AcademicArticle;
-                    roh:correspondingAuthor ?person.
+  ?publication   roh:correspondingAuthor ?person.
   ?person roh:hasContactInfo ?individual;
   foaf:name ?author.
   ?individual vcard:hasAddress ?adress.
   ?adress 
-  vcard:country-name ?country-name ;
-    vcard:extended-address  ?extended_addres;
+  vcard:country-name ?countryName ;
+    vcard:extended-address  ?extendedAddres;
     vcard:locality ?city;
     vcard:postal-code ?PostalCode;
     vcard:street-address ?address.
