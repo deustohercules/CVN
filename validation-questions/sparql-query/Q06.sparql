@@ -11,14 +11,16 @@ SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?person
 Where {
     ?conference a bibo:Conference; 
     Optional{?conference 
-            roh:title ?title;
-            vcard:locality ?city;
+            roh:title ?title;} 
+
+           Optional{?conference 
+     vcard:locality ?city.}   
+      Optional{?conference 
+
             bibo:presents ?document.
-            ?document roh:title ?titleOfDocument;
+      Optional{
+            ?document roh:title ?titleOfDocument.}Optional{?document
             roh:seqOfAutors ?list.
-        ?list rdf:member ?person.
+        ?list rdf:member ?person.}
     }
-
-
-    
   }
