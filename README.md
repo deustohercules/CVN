@@ -145,12 +145,10 @@ El contenido del archivo que queremos debe enviarse como el cuerpo, en codificac
 - `Error while parsing the XML.` \
     El XML no es válido o no ha sido posible procesarlo (ej.: extremadamente grande)
 
-
-
 #### curl
 
 Suponiendo que el servidor está en `127.0.0.1:5000`, la siguiente llamada usando la utilidad de consola `curl` convertirá
-el archivo en `examples/0000-0002-8894-44817.xml` y guarda el ttl resultante en un fichero con el mismo nombre y en la misma dirección pero con terminación .ttl. 
+el archivo en `examples/0000-0002-8894-4481.xml` y guarda el ttl resultante en un fichero con el mismo nombre y en la misma dirección pero con terminación .ttl. 
 
 ```bash
 curl --location --request POST 'http://localhost:5000/v1/convert?orcid=0000-0002-8894-4481&format=turtle' --header 'Content-Type: application/x-www-form-urlencoded' --data-binary '@examples/0000-0002-8894-4481.xml'> examples/0000-0002-8894-4481.ttl
