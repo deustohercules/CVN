@@ -553,8 +553,8 @@ displayname = "roh:BachelorsSupervisingRelationship"
                     bean = "CvnFamilyNameBean/{http://codes.cvn.fecyt.es/beans}SecondFamilyName"
 
     [[entities.subentities]]
-    displayname = "roh:DegreeThesis"
-    id.resource = "DegreeThesis"
+    displayname = "roh:BachelorsDegree"
+    id.resource = "BachelorsDegree"
 
         [[entities.subentities.relationships]]
         direct = "roh:producedBy"

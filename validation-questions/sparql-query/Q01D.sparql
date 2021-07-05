@@ -1,9 +1,13 @@
 prefix roh: <http://w3id.org/roh#>
 PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+
 
 SELECT distinct ?authorName  ?document
  WHERE { 
     ?document roh:correspondingAuthor ?URI_author.
+    ?document a bibo:Book.
+    ?document a bibo:BookSection.  
     ?URI_author foaf:name ?authorName;
   }
   
