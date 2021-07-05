@@ -8,7 +8,7 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 
 SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?person
 Where {
-    ?conference a bibo:Conference; ?document.
+    ?conference a bibo:Conference; 
     Optional{?conference 
             roh:title ?title;
             vcard:locality ?city;
