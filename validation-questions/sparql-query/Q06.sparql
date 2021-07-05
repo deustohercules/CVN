@@ -1,2 +1,21 @@
 # ACTIVIDADES!
 
+prefix roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#>
+SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?person
+Where {
+    ?conference a bibo:Conference; ?document.
+    Optional{?conference 
+            roh:title ?title;
+            vcard:locality ?city;
+            bibo:presents ?document.
+            ?document roh:title ?titleOfDocument;
+            roh:seqOfAutors ?list.
+        ?list rdf:member ?person.
+    }
+
+
+    
+  }

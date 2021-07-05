@@ -2,10 +2,6 @@
 
 Los ficheros sparql están en el lenguaje [SPARQL](https://www.w3.org/TR/rdf-sparql-query/). El resultado real de ejecutar cada una de las preguntas sparql, usando como datos los ttl resultantes de la transformación de los CVN en formato XML, pueden encontrarse en los link de este documento. Estos ficheros (tanto los ttl como los ficheros HTML que contiene la respuesta real) son generados automáticamente mediante Git Actions. Estas acciones se ejecutan cada vez que hay una modificación en el repositorio por lo que los archivos HTML están actualizados en todo momento.  En la siguiente lista encontramos el significado de cada fichero/pregunta sparql junto con el link de los ficheros HTML generados.
 
-<!--The `.sparql` files are the queries in language [SPARQL](https://www.w3.org/TR/rdf-sparql-query/). The meaning of each query can be found below. The real result of executing a sparql query, using the data located in the `examples/result` folder, can be found in the link that follows the query in the list below. These files are created automatically, by the [workflow](https://github.com/deustohercules/CVN/blob/main/.github/workflows/widoco-and-validation-questions.yaml) deployed in GitHub Actions, each time a modification is made. -->
-
-
-<!--The following list details the meaning of each query with the link to the real execution result:-->
 
 * CQ01 - Listado de autores y documentos de los que son el autor correspondiente. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q01.html)
 
