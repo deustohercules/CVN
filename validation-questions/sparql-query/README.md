@@ -12,12 +12,12 @@ Los ficheros sparql están en el lenguaje [SPARQL](https://www.w3.org/TR/rdf-spa
     * CQ01C - Listado de autores y libros o secciones de libros de los que son el autor correspondiente. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q01C.html)
   
 
-* CQ02. Listado de personas y su dirección. La dirección vendrá dada por diversos parámetros en los que se incluye el código postal, la dirección, la extensión de la dirección o la ciudad. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q02.html)
+* CQ02. - Listado de personas y su dirección. La dirección vendrá dada por diversos parámetros en los que se incluye el código postal, la dirección, la extensión de la dirección o la ciudad. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q02.html)
 
 * CQ3.  Listado de PhD Tesis junto con el nombre de cada uno de estos documentos y en caso de tenerla la nota de estos mismos. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q03.html)
 
 * CQ4 - Listado de investigadores principales junto con los proyectos en los que han tenido este rol. Además se incluirá el nombre del proyecto y la cantidad monetaria asignada a dicho proyecto. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q04.html)
 
-* CQ05 - La pregunta Q04 pero en vez de únicamente exponer los investigadores principales se expondrán todas aquellas personas declaradas con un rol de miembro en dicho proyecto. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q05.html)
+* CQ05 - Listado de personas que han sido miembros de un proyesto. Además se incluirá el nombre del proyecto, la URI del projecto y la cantidad monetaria asignada a dicho proyecto. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q05.html)
 
-* CQ06 - - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q06.html)
+* CQ06 - Listado de conferencias, con su nombre y ciudad en la que se ha presentado una serie algún artículo (columna documents) junto con el nombre y los autores de dicho artículo en caso de estar declarado. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q06.html)
