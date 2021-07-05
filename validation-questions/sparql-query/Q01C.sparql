@@ -4,9 +4,13 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 
 
 SELECT distinct ?authorName  ?document
- WHERE { 
+ WHERE { {
     ?document roh:correspondingAuthor ?URI_author.
-    ?document a roh:BachelorsDegree. 
-    ?URI_author foaf:name ?authorName;
-  }
-  
+    ?document a bibo:Book.
+    
+    ?URI_author foaf:name ?authorName.
+  } UNION{
+    ?document roh:correspondingAuthor ?URI_author.
+    ?document a bibo:BookSection.
+    ?URI_author foaf:name ?authorName.}
+ }

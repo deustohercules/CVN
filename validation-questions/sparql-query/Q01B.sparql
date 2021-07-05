@@ -6,7 +6,7 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 SELECT distinct ?authorName  ?document
  WHERE { 
     ?document roh:correspondingAuthor ?URI_author.
-    ?document a bibo:AcademicArticle. 
+    ?document a roh:BachelorsDegree. 
     ?URI_author foaf:name ?authorName;
   }
   

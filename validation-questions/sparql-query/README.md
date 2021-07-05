@@ -12,14 +12,21 @@ The real result of executing a sparql query, using the data located in the [vali
 
 The following list details the meaning of each query with the link to the real execution result:
 
-* CQ01. Listado de centros de investigación los cuales tiene area de conocimiento `uneskos-individuals:120304`. Se devuelve la URI de dicho centro (columna *centro*) y en caso de que este declarado en el grafo de conocmiento, tambien se devolvera el nombre de dicho centro (columna *centerName*) y el nombre de la universidad a la que pertenece (columna *universityName*). - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q01.html)
+* CQ01 - Listado de autores y documentos de los que son el autor correspondiente. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q01.html)
 
-* CQ02. Listado de los investigadores (columna *researcher*) que tienen el area de conocimiento `unekos:120304` y cuya posicion (columna *positionClass*) es de `ResearcherPosition` en un centro de investigacion concreto (columna center). - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q02.html)
+    *  CQ01A - Listado de autores y Academic Article de los que son el autor correspondiente.  - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q01A.html)
 
-* CQ3. Devuelve un listado de investigadores (columna *researcher*) con área de investigación `uneskos-individuals:120304`. Por cada investigador se devuelve el número de citas de su CV (columna *n_citas*), la metrica h_index de su CV (columna *h_index*), la métrica i10-index de su CV (columa *i10-index*), el numero de publicaciones en las que ha participado (columna *n_pubicaciones*) y el numero de publicaciones de las que es autor principal (columna *n_corresponding_author*). Los usuarios estan ordenados según la suma de todos estos parametros. Como maximo se devolveran 10 usuarios. - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q03.html)
+    * CQ01B -  Listado de autores y thesis de grado de los que son el autor correspondiente. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q01B.html)
 
-* CQ4 - Listado de los centros de investigación (columna *center*) que tienen sellos de calidad y el número de sellos que tienen (columna *numberOfSeals*). Solo se muestran los 10 primeros centros con un ordenacion descendiente. - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q04.html)
+    * CQ01C - Listado de autores y libros o secciones de libros de los que son el autor correspondiente. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q01C.html)
+  
 
-* CQ05 - Listado de centros de investigacion (columna *centre*) que han partipado en proyectos (columna *proyect*). Ademas se incluira, en caso de que dicho proyecto lo tenga definido en el grafo de conocimiento su clasificacion (columna *classClasificacionProject*). - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q05.html)
+* CQ02. Listado de personas y su dirección. La direccion sera espuesta por diversos parametros en los que se incluye el codigo postal, la direccion, la extencion de la direccion o la ciudad. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q02.html)
 
-* CQ06 - Listado de la producción científica (columna *ResearchObject*) en un determinado rango de fechas (`de 1980 a 2022`) de un centro/estructura de investigación (columna *Organization*) en un área/disciplina  `uneskos-individuals:120304`). Como infromacion adicional se incluyen los siguientes datos: el tipo de archivo que es (columna *researchObjectClass*), autor de correspondencia (columna *author*), fecha (columna  *dateTime*) , titulo (columna title), si esta en un repo se devolvera la URI de dicho repo (columna *repository*), palabras claves del recurso (columna *keyword*)  y doi (columna *doi*) . - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q06.html)
+* CQ3.  Listado de PhD Thesis junto con el nombre de cada uno de estos documentos y en caso de tenerla la nota de estos mismos. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q03.html)
+
+* CQ4 - Listado de investigadores principales junto con los proyectos en los que han tenido este rol. Ademas se incluira el nombre del proyecto y la cantidad monetaria asignada a dicho proyecto. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q04.html)
+
+* CQ05 - La pregunta Q04 pero en vez de unicamente exponer los investigadores principales se expondran todas aquellas personas declaradas con un rol de miembro en dicho proyecto. - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q05.html)
+
+* CQ06 - - [Link](https://htmlpreview.github.io/?https://github.com/deustohercules/CVN/blob/gh-pages/Q07.html)
