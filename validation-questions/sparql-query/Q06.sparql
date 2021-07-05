@@ -22,7 +22,7 @@ Where {
             bibo:presents ?document.
       Optional{
             ?document roh:title ?titleOfDocument.}Optional{?document
-            roh:seqOfAutors ?list.
+            roh:seqOfAuthors ?list.
         ?list rdfs:member ?person.}
     }
   }
