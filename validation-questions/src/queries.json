@@ -7,5 +7,5 @@
   "Q03": "Listado de investigadores principales junto con los proyectos en los que han tenido este rol. Además se incluirá el nombre del proyecto, la URI del projecto y la cantidad monetaria asignada a dicho proyecto.  ",
   "Q04": "Listado de investigadores principales junto con los proyectos en los que han tenido este rol. Además se incluirá el nombre del proyecto y la cantidad monetaria asignada a dicho proyecto",
   "Q05": "Listado de personas que han sido miembros de un proyecto. Además se incluirá el nombre del proyecto, la URI del proyecto y la cantidad monetaria asignada a dicho proyecto.",
-  "Q06": "Listado de conferencias, con su nombre y ciudad en la que se ha presentado una serie algún artículo (columna documents) junto con el nombre y los autores de dicho artículo en caso de estar declarado. "
+  "Q06": "Listado de conferencias, con su nombre y ciudad en la que se ha presentado una serie algún artículo (columna documents) junto con el nombre y los autores de dicho artículo en caso de estar declarado."
 }
