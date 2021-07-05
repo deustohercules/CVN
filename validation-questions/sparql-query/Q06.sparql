@@ -6,6 +6,8 @@ PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
 prefix ro: <http://w3id.org/roh/mirror/obo/ro#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix vcard: <http://w3id.org/roh/mirror/vcard#>
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
 
 SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?person
 Where {
