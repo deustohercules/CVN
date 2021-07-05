@@ -23,6 +23,6 @@ Where {
       Optional{
             ?document roh:title ?titleOfDocument.}Optional{?document
             roh:seqOfAutors ?list.
-        ?list rdf:member ?person.}
+        ?list rdfs:member ?person.}
     }
   }
