@@ -5,6 +5,7 @@ PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
 prefix ro: <http://w3id.org/roh/mirror/obo/ro#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix vcard: <http://w3id.org/roh/mirror/vcard#>
 
 SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?person
 Where {
