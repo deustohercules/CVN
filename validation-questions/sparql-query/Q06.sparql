@@ -9,7 +9,7 @@ prefix vcard: <http://w3id.org/roh/mirror/vcard#>
 prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 
 
-SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?person
+SELECT distinct ?conference ?title ?city ?document ?titleOfDocument ?PersonName
 Where {
     ?conference a bibo:Conference; 
     Optional{?conference 
@@ -23,6 +23,7 @@ Where {
       Optional{
             ?document roh:title ?titleOfDocument.}Optional{?document
             roh:seqOfAuthors ?list.
-        ?list rdfs:member ?person.}
+        ?list rdfs:member ?person.
+        ?person foaf:name ?PersonName}
     }
   }
