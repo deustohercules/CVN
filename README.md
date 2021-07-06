@@ -110,7 +110,13 @@ En Ubuntu desde la terminar,
 ```bash
 ./cvn/test/execute.sh
 ```
-Creara o mdoficiara los difhceros .ttl de todos los ejemplos de CVN que se encuentran en la carpeta examples.
+Creara o mdoficiara los difhceros .ttl de todos los ejemplos de CVN que se encuentran en la carpeta examples. 
+
+## Git Action 
+
+Se han creado una git Action que permite realizar este test de manera automáticamente en este repositorio. Dentro de este test, en el cual se ejecuta de forma específica el software almacenado en [validation-questions/src](https://github.com/deustohercules/CVN/tree/main/validation-questions/src), se crearan los archivos .ttl al igual que los genera el código explica en la sección anterior.  Con estos archivos se realiza una serie de preguntas sparql que están almacenadas en la carpeta [validation-questions/sparql-query](https://github.com/deustohercules/CVN/tree/main/validation-questions/sparql-query) y explicadas en el siguiente [readme](https://github.com/deustohercules/CVN/blob/main/validation-questions/sparql-query/README.md). Esta acción también se encarga de generar los ficheros html que contendrá las respuestas a dichas preguntas basándose en los 8 ficheros xml que tenemos.
+
+Esta acción se ejecuta cada vez que hay una modificación en el repositorio.
 
 # Endpoints
 

@@ -119,9 +119,8 @@ for f in files:
 
     # Por ultimo añadimos los tres enlaces que aparecen abajo!
     string = '</br><div style = "width:82%" >'
-    string = string + '<left > <a href="https://github.com/HerculesCRUE/ROH"> Repositorio Principal.</a> </left >'
-    string = string + '<center  > <a href="https://github.com/HerculesCRUE/ROH/blob/gh-pages/2-%20CoberturaPreguntasCompetencia.pdf"> CoberturaPreguntasCompetencia.pdf.</a> </center>'
-    string = string + '<right > <a href="https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/sparql-query/README.md"> Preguntas Sparql y results.</a> </right>'
+    string = string + '<left > <a href="https://github.com/deustohercules/CVN"> Repositorio Principal.</a> </left >'
+    string = string + '<right > <a href="https://github.com/deustohercules/CVN/blob/main/validation-questions/sparql-query/README.md"> Preguntas Sparql y results.</a> </right>'
     string = string + '</div>'
 
     # Unimos estos tres enlaces a lo que ya tenemos!
