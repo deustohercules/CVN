@@ -1,7 +1,7 @@
 {
   "Q01": "Listado de autores y documentos de los que son el autor correspondiente. ",
   "Q01A": "Listado de autores y Academic Article de los que son el autor correspondiente.",
-  "A01B": "Listado de autores y tesis de grado de los que son el autor correspondiente. ",
+  "Q01B": "Listado de autores y tesis de grado de los que son el autor correspondiente. ",
   "Q01C": "Listado de autores y libros o secciones de libros de los que son el autor correspondiente.",
   "Q02": "Listado de personas y su dirección. La dirección vendrá dada por diversos parámetros en los que se incluye el código postal, la dirección, la extensión de la dirección o la ciudad. ",
   "Q03": "Listado de investigadores principales junto con los proyectos en los que han tenido este rol. Además se incluirá el nombre del proyecto, la URI del projecto y la cantidad monetaria asignada a dicho proyecto.  ",
