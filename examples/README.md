@@ -1,1 +1,1 @@
-En esta capeta se encuentra una serie de CVN en formato xml y los respectivos ficheros resultantes en formato ttl de estos mismos se encuentran en la carpeta `result`.
+En esta carpeta se encuentra una serie de CVN en formato xml y los respectivos ficheros resultantes en formato ttl de estos mismos se encuentran en la carpeta `result`.

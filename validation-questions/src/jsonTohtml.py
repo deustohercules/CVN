@@ -2,7 +2,7 @@ from json2html import *
 import json
 from os import listdir
 
-# Obtngo las capetas donde estan los .json y .sparql y la carpeta destino de los html. 
+# Obtngo las carpetas donde estan los .json y .sparql y la carpeta destino de los html. 
 folder_jsons = sys.argv[1]
 fordel_html = sys.argv[2]
 
